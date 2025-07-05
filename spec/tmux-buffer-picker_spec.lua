@@ -1,4 +1,4 @@
-local base = require("base")
+local base = require("tmux-buffer-picker")
 
 
 -- Test base.nvim with default options

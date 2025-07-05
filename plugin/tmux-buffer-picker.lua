@@ -1,8 +1,8 @@
 -- In this file you define the User commands, i.t how the user will interact with your plugin.
 
 local sub_cmds = {
-  hello = require("base").hello,
-  bye = require("base").bye,
+  hello = require("tmux-buffer-picker").hello,
+  bye = require("tmux-buffer-picker").bye,
 }
 
 local sub_cmds_keys = {}
@@ -13,7 +13,7 @@ end
 local function main_cmd(opts)
   local sub_cmd = sub_cmds[opts.args]
   if sub_cmd == nil then
-    vim.print("Base: invalid subcommand")
+    vim.print("tmux-buffer-picker: invalid subcommand")
   else
     sub_cmd()
   end
